@@ -1,8 +1,6 @@
-def hello():
-    print("Bye")
-    print("Hi")
-    print("Tom")
-
-hello()
-print("This is a line of code")
-hello()
+def add(a, b):
+    print(a)
+    print(b)
+    print(a+b)
+    
+add(10, 20)
