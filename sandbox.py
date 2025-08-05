@@ -1,6 +1,4 @@
-def add(a, b):
-    print(a)
-    print(b)
-    print(a+b)
+def speed(distance, time):
+    print(distance/time)
     
-add(10, 20)
+speed(distance=100, time=2)
