@@ -1,9 +1,7 @@
-def area(radius, pi=3.14):
-    result = pi*radius*radius
-    return result
-def cost(circle_area, cost_per_sqm):
-    total_cost = circle_area*cost_per_sqm
-    return total_cost
-calcutated_area = area(10, 3.15)
-tc = cost(calcutated_area, 2)
-print(tc)
+def circle(r):
+    area = 3.14 * r * r
+    circumference = 2 * 3.14 * r
+    return area, circumference
+
+a,c = circle(10)
+print(f" Area of the circle is {a}, circumference of the circle is {c}")
