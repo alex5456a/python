@@ -1,8 +1,9 @@
-def add(numbers):
-    total = 0
+def remove_duplicates(numbers):
+    new_list = []
     for number in numbers:
-        total += number
-    return total
+        if number not in new_list:
+            new_list.append(number)
+    return new_list
 
-score = [1,2,3,4,5]
-print(add(score))
+ids = [1, 2 , 2, 1, 3, 4, 5]
+print(remove_duplicates(ids))
