@@ -1,7 +1,8 @@
-def circle(r):
-    area = 3.14 * r * r
-    circumference = 2 * 3.14 * r
-    return area, circumference
+def add(numbers):
+    total = 0
+    for number in numbers:
+        total += number
+    return total
 
-a,c = circle(10)
-print(f" Area of the circle is {a}, circumference of the circle is {c}")
+score = [1,2,3,4,5]
+print(add(score))
