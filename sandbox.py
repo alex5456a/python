@@ -1,18 +1,14 @@
 import numpy as np
 
-arr_1d = np.array([67, 23, 10, -100, 234, 5])
-#arr_1d.sort()
-arr_1d_sorted = np.sort(arr_1d)
+arr_1 = np.array([67, 23, 10, -100, 234, 5])
+arr_2 = np.array([1, 2, 3, 4, 5])
+arr_3 = np.array([1, 2, 3, 4, 5])
 
-str_arr_1d = np.array(['cherry', 'banana', 'data', 'apple', 'eggplant'])
-sorted_str_arr_1d = np.sort(str_arr_1d)
+both = np.concatenate((arr_1, arr_2, arr_3))
+print(both)
 
-sorted_indiced = np.argsort(arr_1d)
+arr_1_extended = np.append(arr_1, 1000)
+print(arr_1_extended)
 
-print(str_arr_1d)
-print(arr_1d)
-print(arr_1d_sorted)
-print(sorted_indiced)
-
-for i in sorted_indiced:
-    print(arr_1d[i])
+arr_1_deleted = np.delete(arr_1, 3)
+print(arr_1_deleted)
