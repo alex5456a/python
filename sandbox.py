@@ -1,21 +1,18 @@
 import numpy as np
 
-test = np.arange(4, 14, 2)
-print(test)
+arr_1d = np.array([67, 23, 10, -100, 234, 5])
+#arr_1d.sort()
+arr_1d_sorted = np.sort(arr_1d)
 
-test2 = np.array([1, 2, 3, 4])
-print(test2 + np.ones(4))
-print(test2 + test2)
+str_arr_1d = np.array(['cherry', 'banana', 'data', 'apple', 'eggplant'])
+sorted_str_arr_1d = np.sort(str_arr_1d)
 
-# arr = np.array([1, 2, 3, 4, 5, 6, 7])
-# arr2 = np.array([10, 20, 30, 40, 50, 60, 100])
-# print(arr * arr2)
+sorted_indiced = np.argsort(arr_1d)
 
-# arr[0] = 4444
-# arr[-1] = 888
-# print(arr)
+print(str_arr_1d)
+print(arr_1d)
+print(arr_1d_sorted)
+print(sorted_indiced)
 
-# last_four = arr[-4:]
-# print(last_four)
-# last_four[0] = 3534545
-# print(arr)
+for i in sorted_indiced:
+    print(arr_1d[i])
