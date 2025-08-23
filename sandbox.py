@@ -1,14 +1,12 @@
 import numpy as np
 
-arr_1 = np.array([67, 23, 10, -100, 234, 5])
-arr_2 = np.array([1, 2, 3, 4, 5])
-arr_3 = np.array([1, 2, 3, 4, 5])
+names = np.array(['Shaun', 'Geraldo', 'Bob', 'Jim'])
+ages = np.array([30, 30, 40, 40])
+drinks_coffee = np.array([True, False, True, False])
 
-both = np.concatenate((arr_1, arr_2, arr_3))
-print(both)
+ind = np.lexsort((names, ages))
+# for i in ind:
+#     print(f"{names[i]} + {ages[i]} + {drinks_coffee[i]}")
 
-arr_1_extended = np.append(arr_1, 1000)
-print(arr_1_extended)
-
-arr_1_deleted = np.delete(arr_1, 3)
-print(arr_1_deleted)
+for name, age, coffee in zip(names[ind], ages[ind], drinks_coffee[ind]):
+    print(f'{name} - {age} - {coffee}')
