@@ -1,14 +1,10 @@
 import numpy as np
+import pandas as pd
 
-x = 5
-print(x + 1)
+my_series = pd.Series([1, 2, 3, 4, 5], index=['a', 'b', 'c', 'd', 'e'])
+my_series_d = pd.Series({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'c': 5})
+my_series_np = pd.Series(np.array([1, 2, 3, 4, 5]), index=np.array(['a', 'b', 'c', 'd', 'e']))
 
-my_arr = np.array([1, 2, 3, 4])
-my_arr2 = np.array([100, 200, 300, 400])
-print(my_arr + 1)
-print(my_arr > 2)
-print(my_arr ** 2)
-
-print(my_arr + my_arr2)
-print(my_arr > my_arr2)
-print(my_arr2 ** my_arr)
+print(my_series)
+print(my_series_d)
+print(my_series_np)
