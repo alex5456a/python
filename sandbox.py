@@ -1,10 +1,19 @@
-import numpy as np
 import pandas as pd
+import numpy as np
 
-my_series = pd.Series([1, 2, 3, 4, 5], index=['a', 'b', 'c', 'd', 'e'])
-my_series_d = pd.Series({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'c': 5})
-my_series_np = pd.Series(np.array([1, 2, 3, 4, 5]), index=np.array(['a', 'b', 'c', 'd', 'e']))
+user_data = {
+    'id': { 'a': 123, 'b': '234', 'c': 345 },
+    'name': { 'a': 'Bob', 'b': 'Sue', 'c': 'Dean' },
+    'age': { 'a': 30, 'b': 40, 'c': 50 },
+}
 
-print(my_series)
-print(my_series_d)
-print(my_series_np)
+index = np.array(['a', 'b', 'c'])
+
+user_data_s = {
+    'id': pd.Series([123, 345, 456], index=index),
+    'name': pd.Series(['Bob', 'Sue', 'Dean'], index=index),
+    'age': pd.Series([30, 40, 50], index=index),
+}
+
+print(pd.DataFrame(user_data))
+print(pd.DataFrame(user_data_s))
