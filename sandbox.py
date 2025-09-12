@@ -1,19 +1,16 @@
-import pandas as pd
 import numpy as np
+import pandas as pd
 
-user_data = {
-    'id': { 'a': 123, 'b': '234', 'c': 345 },
-    'name': { 'a': 'Bob', 'b': 'Sue', 'c': 'Dean' },
-    'age': { 'a': 30, 'b': 40, 'c': 50 },
-}
-
-index = np.array(['a', 'b', 'c'])
-
-user_data_s = {
-    'id': pd.Series([123, 345, 456], index=index),
-    'name': pd.Series(['Bob', 'Sue', 'Dean'], index=index),
-    'age': pd.Series([30, 40, 50], index=index),
-}
-
-print(pd.DataFrame(user_data))
-print(pd.DataFrame(user_data_s))
+ev_data = pd.read_csv('ev_data.csv')
+ev_data.head(3)
+ev_data.tail(3)
+ev_data.info()
+ev_data.describe()
+ev_data[['Postal Code', 'Model Year', 'Base MSRP']].head()
+ev_data.nunique()
+years = ev_data['Postal Code'].unique()
+years.sort()
+original_col_names = ev_data.columns
+ev_data.columns ['vin', 'county', 'city', 'state', 'postal_code', 'model_year', 'make', 'model', 'ev_type', 'cafv', 'range', 'base_msrp', 'district', 'dol_id', 'location']
+names_map = { key: value for key, value in zip(ev_data.colums, original_col_names)}
+ev_data.rename(columns=names_map)
